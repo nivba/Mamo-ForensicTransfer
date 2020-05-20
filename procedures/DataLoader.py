@@ -73,7 +73,3 @@ class data_loader:
         fake_idx = np.random.permutation(len(self.fake))
         return (self.real[real_idx, :, :]/1100).astype(np.float32), (self.fake[fake_idx, :, :]/1100).astype(np.float32)
 
-#loader = data_loder("C:\\niv\\Mammo_GAN\\injected")
-#loader.load()
-#print(len(loader.data))
-#print(sum(loader.labels))
