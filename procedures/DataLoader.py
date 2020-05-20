@@ -4,7 +4,7 @@ import os
 
 from matplotlib import pyplot as plt
 
-class data_loder:
+class data_loader:
     def __init__(self, path):
         self.path = path
         self.real = []
