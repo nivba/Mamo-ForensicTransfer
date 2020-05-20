@@ -1,6 +1,6 @@
 import torch
 import torch.nn as nn
-import DataLoder
+import DataLoader
 import numpy as np
 
 class Mammo_FT(nn.Module):
@@ -89,7 +89,7 @@ def train(model, data_path, ephocs=1, batch_size=1, learning_rate=0.002):
     print(device)
     model.to(device)
     optimaizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
-    data_loader = DataLoder.data_loder(data_path)
+    data_loader = DataLoader.data_loader(data_path)
     data_loader.load()
     training_set_size = min(len(data_loader.fake), len(data_loader.real))
     n_batch = (training_set_size//batch_size)*2
