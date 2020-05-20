@@ -116,6 +116,3 @@ def train(model, data_path, ephocs=1, batch_size=1, learning_rate=0.002):
             print("Ephoc: %d/%d, batch: %d/%d, loss = %1.4f, true_label = %d, mean_label = %1.4f" %
                   (ephoc+1,ephocs,batch+1,n_batch,loss.item(),batch % 2,np.mean(out_labels.detach().numpy())))
 
-data_path = "C:\\niv\\Mammo_GAN\\training set"
-model = Mammo_FT()
-train(model, data_path, ephocs=5, batch_size=2)
