@@ -10,4 +10,4 @@ In this project I plan to develop a deep learning based system to detect malicio
 ##
 This tool will consist of two neuronal networks:
 1. Forensic transfer- an autoencoder NN that receives tiles from a mammogram image determines for each tile the degree of probability that it is forged
-2. A fully conected Net that receives for each image the tile scores from the previous grid and returns whether the image is real or fake
+2. A Convolutional neural network that receives for each image the tile scores from the previous grid and returns whether the image is real or fake.
