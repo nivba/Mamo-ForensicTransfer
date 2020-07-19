@@ -23,10 +23,10 @@ class Forgery_detection:
         self.score_arr_size = int(np.floor((self.img_size - self.tile_size) / ((1 - self.overlap) * self.tile_size) + 1))
         self.step_size = int(np.floor(self.tile_size * (1 - self.overlap)))
         self.MammoFT = ModelLayer1.Mammo_FT()
-        self.MammoFT.load_state_dict(torch.load("procedures\\mammo-FT8-2-adpt.ckpt"))
+        self.MammoFT.load_state_dict(torch.load("procedures\\mammo-FT.ckpt"))
         self.MammoFT.eval()
         self.Classifier = ModelLayer2.ScoreClassifier()
-        self.Classifier.load_state_dict(torch.load("procedures\\Score_Classifier-4.ckpt"))
+        self.Classifier.load_state_dict(torch.load("procedures\\Score_Classifier.ckpt"))
         self.Classifier.eval()
 
     def load_imgs(self):
