@@ -112,7 +112,7 @@ class Forgery_detection:
         mammo = ((mammo - 300) / (800 - 300)) * 255
         return mammo
 
-path ="D:\\Breast Cancer\\Databases\\Forensic-Transfer\\test set\\NVIDIA"
+path ="D:\\data"
 Fd = Forgery_detection(path)
 Fd.load_imgs()
 Fd.classification()
