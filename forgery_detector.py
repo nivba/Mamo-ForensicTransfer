@@ -96,18 +96,12 @@ class Forgery_detection:
             rows, cols =img.shape
             cut_heatmap = np.copy(heatmap[self.img_size//2-rows//2:self.img_size//2-rows//2 + rows,
                 self.img_size//2-cols//2:self.img_size//2-cols//2 + cols])
-            #heatmap_img = cv2.applyColorMap(cut_heatmap, cv2.COLORMAP_JET)
-            #print(heatmap_img.shape)
             img = self.display(img)
-            #img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-            #img = np.expand_dims(img, axis=2)
-            #fin = cv2.addWeighted(heatmap_img, 0.3, img, 0.7, 0)
             print("name: %s, score: %1.2f, label: %d" %
                   (self.img_names[i], self.scores[i], 1 if self.scores[i] > 0.5 else 0))
             plt.figure()
             plt.imshow(img, cmap='gray')
             plt.imshow(cut_heatmap, cmap='jet', alpha=0.2)
-            #plt.colorbar()
             plt.show()
 
     def display(self,img_array):
