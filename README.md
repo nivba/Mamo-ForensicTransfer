@@ -1,6 +1,8 @@
 # Mamo-ForensicTransfer
 auto-encoder-based forgery detection tool for mammogram images.
 
+project resentation - https://www.youtube.com/watch?v=bOTE8LqXQCg&t=27s (hebrew)
+
 ##
 Due to computing processes in the medical system, hospitals and clinics around the world have become a target to many cyber-attacks. In 2019 a team of researchers from Ben-Gurion University and Soroka medical center demonstrated how an attacker can inject or remove lesions from chest computerized tomography (CT) scans potentially causing misdiagnosis.
 
